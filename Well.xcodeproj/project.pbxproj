@@ -14,6 +14,10 @@
 		3F8DAD3E2AD072900038A967 /* WellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DAD3D2AD072900038A967 /* WellTests.swift */; };
 		3F8DAD482AD072900038A967 /* WellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DAD472AD072900038A967 /* WellUITests.swift */; };
 		3F8DAD4A2AD072900038A967 /* WellUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DAD492AD072900038A967 /* WellUITestsLaunchTests.swift */; };
+		3F8DAD572AD07D760038A967 /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DAD562AD07D750038A967 /* View2.swift */; };
+		3F8DAD5D2AD0BA2F0038A967 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DAD5C2AD0BA2F0038A967 /* MainTabBar.swift */; };
+		3F8DAD5F2AD0BB400038A967 /* newView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DAD5E2AD0BB400038A967 /* newView.swift */; };
+		3F8DAD632AD0C4250038A967 /* TextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DAD622AD0C4250038A967 /* TextMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		3F8DAD432AD072900038A967 /* WellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8DAD472AD072900038A967 /* WellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellUITests.swift; sourceTree = "<group>"; };
 		3F8DAD492AD072900038A967 /* WellUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F8DAD562AD07D750038A967 /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
+		3F8DAD5C2AD0BA2F0038A967 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		3F8DAD5E2AD0BB400038A967 /* newView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newView.swift; sourceTree = "<group>"; };
+		3F8DAD622AD0C4250038A967 /* TextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +105,13 @@
 			children = (
 				3F8DAD2B2AD0728F0038A967 /* WellApp.swift */,
 				3F8DAD2D2AD0728F0038A967 /* ContentView.swift */,
+				3F8DAD562AD07D750038A967 /* View2.swift */,
+				3F8DAD5C2AD0BA2F0038A967 /* MainTabBar.swift */,
+				3F8DAD5E2AD0BB400038A967 /* newView.swift */,
 				3F8DAD2F2AD072900038A967 /* Assets.xcassets */,
 				3F8DAD312AD072900038A967 /* Well.entitlements */,
 				3F8DAD322AD072900038A967 /* Preview Content */,
+				3F8DAD622AD0C4250038A967 /* TextMessageView.swift */,
 			);
 			path = Well;
 			sourceTree = "<group>";
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F8DAD5D2AD0BA2F0038A967 /* MainTabBar.swift in Sources */,
+				3F8DAD632AD0C4250038A967 /* TextMessageView.swift in Sources */,
 				3F8DAD2E2AD0728F0038A967 /* ContentView.swift in Sources */,
+				3F8DAD572AD07D760038A967 /* View2.swift in Sources */,
 				3F8DAD2C2AD0728F0038A967 /* WellApp.swift in Sources */,
+				3F8DAD5F2AD0BB400038A967 /* newView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
