@@ -28,24 +28,29 @@ struct MainTabBar: View {
                     // Vista de Inicio
                     NavigationView {
                         
+                        JourneysTab()
+                            .navigationBarBackButtonHidden(true) // Oculta el botón de retroceso
+                            .navigationTitle("Journeys")
                         Spacer()
                     }
                     .tag(1)
                     .tabItem {
                         Image(systemName: "circle")
-                        Text("Búsqueda")
+                        Text("Journeys")
                     }
                     
                     //Vista search
                     NavigationView {
-                        newView()
-                        Spacer()
+                        AskWellTab()
+                            // Oculta el botón de retroceso
+                            .navigationTitle("ASK WELL")
                     }
                     .tag(2)
                     .tabItem {
+                        Text("ASK WELL") // Título personalizado en la pestaña
                         Image(systemName: "plus.square")
-                        Text("Búsqueda")
                     }
+
                     
                     //Vista Post
                     NavigationView {
