@@ -13,6 +13,7 @@ struct WellApp: App {
         WindowGroup {
             NavigationView {
                 MainTabBar()
+                //JourneysTab()
             }
         }
     }

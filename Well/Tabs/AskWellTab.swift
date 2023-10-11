@@ -7,41 +7,11 @@
 
 import SwiftUI
 
-struct newView: View {
+struct AskWellTab: View {
     @State private var messageText = ""
     
     var body: some View {
         VStack {
-            // Barra de navegación
-            HStack {
-                Button(action: {
-                    // Acción para abrir la cámara
-                    // Puedes implementar la lógica para abrir la cámara aquí
-                }) {
-                    Image(systemName: "camera.fill")
-                        .font(.title)
-                        .foregroundColor(.blue)
-                }
-                
-                Spacer()
-                
-                Text("Ask WELL") // Nombre del amigo o grupo de chat
-                    .font(.headline)
-                
-                Spacer()
-                
-               /* Button(action: {
-                    // Acción para mostrar opciones del chat (por ejemplo, configuración)
-                }) {
-                    Image(systemName: "ellipsis")
-                        .font(.title)
-                        .foregroundColor(.blue)
-                }*/
-            }
-            .padding()
-            .background(Color.white)
-            .shadow(color: Color.black.opacity(0.1), radius: 2, x: 0, y: 1)
-            
             // Lista de mensajes
             List {
                 // Mensajes del chat
@@ -52,6 +22,14 @@ struct newView: View {
             
             // Espacio para escribir mensajes
             HStack {
+                Button(action: {
+                    // Acción para abrir la cámara
+                    // Puedes implementar la lógica para abrir la cámara aquí
+                }) {
+                    Image(systemName: "camera.fill")
+                        .font(.title)
+                        .foregroundColor(.blue)
+                }
                 TextField("Escribe un mensaje", text: $messageText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 
@@ -77,5 +55,5 @@ struct newView: View {
 }
 
 #Preview {
-    newView()
+    AskWellTab()
 }

@@ -3,9 +3,9 @@
 //  Well
 //
 //  Created by well on 6/10/23.
-//
 
 import SwiftUI
+
 
 struct ContentView: View {
     
@@ -18,7 +18,7 @@ struct ContentView: View {
             
             firstPart()
             partTwo()
-            View2()
+            Carousel()
             parThree()
             finalPart()
 
@@ -45,7 +45,7 @@ struct ContentView: View {
             
             VStack (alignment: .leading, spacing: 20){
                 HStack {
-                    NavigationLink(destination: newView()) {
+                    NavigationLink(destination: AskWellTab()) {
                         HStack {
                             Text("Elemento 1")
                             Spacer()
@@ -54,7 +54,7 @@ struct ContentView: View {
                     }
                 }
                 HStack {
-                    NavigationLink(destination: newView()) {
+                    NavigationLink(destination: AskWellTab()) {
                         HStack {
                             Text("Elemento 1")
                             Spacer()
@@ -63,7 +63,7 @@ struct ContentView: View {
                     }
                 }
                 HStack {
-                    NavigationLink(destination: newView()) {
+                    NavigationLink(destination: AskWellTab()) {
                         HStack {
                             Text("Elemento 1")
                             Spacer()
@@ -73,7 +73,7 @@ struct ContentView: View {
                 }
                 
                 HStack {
-                    NavigationLink(destination: newView()) {
+                    NavigationLink(destination: AskWellTab()) {
                         HStack {
                             Text("Elemento 1")
                             Spacer()

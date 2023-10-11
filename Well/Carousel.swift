@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct View2: View {
+struct Carousel: View {
     var body: some View {
         
         HStack {
@@ -66,7 +66,7 @@ struct View2: View {
 }
 
 #Preview {
-    View2()
+    Carousel()
 }
 
 
