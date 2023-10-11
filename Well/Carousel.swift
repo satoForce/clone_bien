@@ -27,29 +27,35 @@ struct Carousel: View {
                                     .frame(width: 200, height: 190)
                                     .cornerRadius(10) // Bordes circulares
                                     .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 5)
+                                    .overlay(
+                                        VStack {
+                                            Image("foto1") // Reemplaza "foto1" con el nombre de tu imagen
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 200, height: 75)
+                                                .cornerRadius(10)
+                                                //.offset(y: -60)
+                                            
+                                            
+                                            VStack(alignment: .leading, spacing: 2) {
+                                                
+                                                Text("Title")
+                                                    .foregroundColor(Color.black)
+                                                    .font(.title2)
+                                                
+                                                Text("Texto largo que va como complemento del subtitulo.")
+                                                    .foregroundColor(Color.black)
+                                                    .font(.body)
+                                                    .multilineTextAlignment(.leading) // Alinea el texto a la izquierda
+                                                // Permite múltiples líneas
+                                            }
+                                            .frame(width: 160)
+                                            .padding()
+                                            //.offset(y: 30)
+                                        }
+                                    )
                                 
-                                Image("foto1") // Reemplaza "foto1" con el nombre de tu imagen
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 200, height: 75)
-                                    .cornerRadius(10)
-                                    .offset(y: -60)
-                                
-                                VStack(alignment: .leading, spacing: 2) {
-                                    
-                                    Text("Title")
-                                        .foregroundColor(Color.black)
-                                        .font(.headline)
-                                    
-                                    Text("Texto largo que va como complemento del subtitulo.")
-                                        .foregroundColor(Color.black)
-                                        .font(.subheadline)
-                                        .multilineTextAlignment(.leading) // Alinea el texto a la izquierda
-                                         // Permite múltiples líneas
-                                }
-                                .frame(width: 160)
-                                .padding()
-                                .offset(y: 30)
+       
                             }
                             
                             // Sombreado

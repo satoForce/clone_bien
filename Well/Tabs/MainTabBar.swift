@@ -16,7 +16,7 @@ struct MainTabBar: View {
                     // Vista de inicio (por defecto)
                     
                     NavigationView {
-                        ContentView()
+                        Home()
                         Spacer()
                     }
                     .tag(0)
