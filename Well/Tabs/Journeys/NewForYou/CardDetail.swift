@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct JourneyDetail: View {
+struct CardDetail: View {
     var body: some View {
         
         ScrollView {
@@ -199,5 +199,5 @@ struct JourneyDetail: View {
 }
 
 #Preview {
-    JourneyDetail()
+    CardDetail()
 }

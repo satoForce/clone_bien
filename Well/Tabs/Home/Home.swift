@@ -3,117 +3,81 @@
 //  Well
 //
 //  Created by well on 6/10/23.
-
 import SwiftUI
-
-
 struct Home: View {
-    
-    
     var body: some View {
-        
-        headerView()
-        
+        HeaderHome()
         ScrollView(.vertical, showsIndicators: false) {
-            
             VStack {
-                firstPart()
-                //Important()
-                partTwo()
-                Carousel()
+
+                FirstPartHome()
+                SecondPartHome()
+                CarouselHome()
                 parThree()
                 finalPart()
             }
         }
     }
-    
-    
-    
-    
-    func Important() -> some View{
-            ZStack (alignment: .leading){
-                Color.white
-                    .frame(height: 150)
-                    .cornerRadius(10)
-                    .shadow(radius: 5)
-                VStack (alignment: .leading){
-                    Spacer()
-                    ZStack {
-                        Text("Hola")
-                    }
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Text("Check-ins")
-                        .foregroundColor(Color.white)
-                        .font(.system(size: 18, weight: .bold, design: .rounded))
-                    
-                    Text("Track yours progress, gain insights, and build habits to last")
-                        .foregroundColor(Color.white)
-                        .font(.system(size: 16, design: .rounded))
-                    Spacer()
-                }.padding()
-            }
-            .padding()
-        }
-    
-    
-    
-    
-    
-    
-    func firstPart() -> some View{
-        return VStack{
-            Text("Good to see you, Sergio 2 👋")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
-                .foregroundColor(Color(UIColor.blue))
-        }.padding()
-    }
-    
-    
-    func partTwo() -> some View{
-        ZStack (alignment: .leading){
-            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.black]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .frame(maxHeight: .infinity)
-                .cornerRadius(10)
-                .shadow(radius: 5)
-            VStack (alignment: .leading){
+    func HeaderHome() -> some View{
+        VStack (alignment: .leading){
+            HStack {
+                Text("Well")
+                    .foregroundColor(Color.blue)
+                    .font(Font.title.bold())
+                    .fontDesign(.rounded)
                 Spacer()
-                
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(Color.black.opacity(0.3))
-                        .frame(maxWidth: .infinity, alignment: .leading) // Alinea a la izquierda y ajusta el ancho
-                        .cornerRadius(10)
-                        .overlay(
-                            HStack {
-                                Image(systemName: "circle.fill")
-                                    .foregroundColor(Color.yellow)
-                                    .font(.body) // Ajusta el tamaño de la fuente
-                                
-                                Text("10 per day")
-                                    .foregroundColor(.white) // Texto blanco
-                                    .font(.body) // Ajusta el tamaño de la fuente
-                            }
-                        )
+                Image(systemName: "circle.fill")
+                    .foregroundColor(Color.yellow)
+                    .font(.system(size: 24))
+            }
+        }
+        .padding()
+    }
+    func FirstPartHome() -> some View{
+        VStack{
+            Text("Good to see you, Sergio 2 👋")
+                .font(Font.title.bold())
+                .fontDesign(.rounded)
+                .foregroundColor(Color(UIColor.blue))
+        }
+    }
+    func SecondPartHome() -> some View {
+        ZStack (alignment: .leading) {
+            GeometryReader { geometry in
+                LinearGradient(gradient: Gradient(colors: [Color.blue,Color.black]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .frame(maxHeight: geometry.size.height)
+                    .cornerRadius(20)
+            }
+            VStack (alignment: .leading) {
+                ZStack{
+                    HStack {
+                        Image(systemName: "circle.fill")
+                            .foregroundColor(Color.yellow)
+                        Text("10 per day")
+                            .foregroundColor(Color.white)
+                    }
+                    .padding(7)
+                    .font(.body)
                 }
+                .background(Color.black.opacity(0.3))
+                .cornerRadius(10)
                 Spacer()
                 Spacer()
                 Spacer()
                 Text("Check-ins")
-                    .foregroundColor(Color.white) // Color celeste
+                    .foregroundColor(Color.white)
                     .font(Font.title)
-                    
-                    
-                
-                Text("Track yours progress, gain insights, and build habits to last")
-                    .foregroundColor(Color.white) // Color blanco
-                    .font(.body) // Fuente redonda
-                Spacer()
-            }.padding()
+                Text("Track your progress, gain insights, and build habits to last")
+                    .foregroundColor(Color.white)
+                    .font(.body)
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(30)
         }
         .padding()
     }
+
     
     func parThree() -> some View {
         VStack (alignment: .leading){
@@ -212,29 +176,6 @@ struct Home: View {
         }
         .padding()
     }
-    
-    func headerView() -> some View{
-        VStack (alignment: .leading){
-            //Encabezado
-            HStack {
-                Text("Well")
-                    .foregroundColor(Color.blue)
-                    .font(.system(size: 30, weight: .bold, design: .rounded))
-                
-                Spacer()
-                
-                Image(systemName: "circle.fill")
-                    .foregroundColor(Color.yellow) // Establece el color amarillo
-                    .font(.system(size: 24)) // Establece el tamaño del icono
-            }
-            .padding()
-            
-            
-
-        }
-        .padding()
-    }
-
 }
 
 

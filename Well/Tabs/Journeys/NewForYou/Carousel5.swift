@@ -12,7 +12,7 @@ struct Carousel5: View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack(spacing: 10) {
                 ForEach(0..<5) { index in
-                    NavigationLink(destination: JourneyDetail()) {
+                    NavigationLink(destination: CardDetail()) {
                         ZStack(alignment: .leading) {
                             Rectangle()
                                 .fill(LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
