@@ -7,12 +7,23 @@
 
 import SwiftUI
 
+
+extension Color {
+    static var random: Color {
+        let red = Double.random(in: 0...1)
+        let green = Double.random(in: 0...1)
+        let blue = Double.random(in: 0...1)
+        return Color(red: red, green: green, blue: blue)
+    }
+}
+
 struct Carousel5: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
                 ForEach(0..<5) { index in
                     ZStack {
+                        Color.random
                         VStack (alignment: .leading){
                             ZStack {               
                                 HStack {
@@ -29,6 +40,7 @@ struct Carousel5: View {
                             .background(Color.black.opacity(0.3))
                             .cornerRadius(10)
                             .padding(20)
+                            Spacer()
                             VStack(alignment: .leading, spacing: 2) {
                                 Text("Title")
                                     .foregroundColor(Color.black)
@@ -46,8 +58,10 @@ struct Carousel5: View {
                         .background(Color.white)
                         .cornerRadius(20)
                         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
-                        
-                    }.frame(width: UIScreen.main.bounds.width / 2)
+
+                    }.frame(width: UIScreen.main.bounds.width / 1.2)
+                        .frame(height: UIScreen.main.bounds.width / 1.3)
+                    
                 }
             }
             .padding()
