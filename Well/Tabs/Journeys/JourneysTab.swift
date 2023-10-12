@@ -12,13 +12,10 @@ import SwiftUI
 
 struct JourneysTab: View {
     @State private var selectedTab = 0
-    private let tabCount = 3 // Cantidad de pestañas
-
+    private let tabCount = 3
     var body: some View {
-        
         NavigationView {
             VStack(alignment: .leading,spacing: 0) {
-                // ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
                     ForEach(0..<tabCount, id: \.self) { index in
                         Button(action: {
@@ -31,14 +28,12 @@ struct JourneysTab: View {
                         }
                     }
                 }
-                //}
                 Divider().background(Color.black)
                 GeometryReader { geometry in
                     Rectangle()
                         .frame(width: (geometry.size.width / 2) / CGFloat(tabCount) , height: 2)
                         .foregroundColor(.blue)
                         .offset(x: CGFloat(selectedTab) * (geometry.size.width / 2) / CGFloat(tabCount))
-                    
                     if selectedTab == 0 {
                         NewForYou()
                     } else if selectedTab == 1 {
@@ -46,16 +41,11 @@ struct JourneysTab: View {
                     } else {
                         Past()
                     }
-                    
                 }
-                
-                
-                
                 Spacer()
             }
             .padding()
-        }//.navigationTitle("Journeys")
-        
+        }
     }
 }
 
