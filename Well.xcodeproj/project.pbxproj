@@ -18,6 +18,7 @@
 		3F8DAD5D2AD0BA2F0038A967 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DAD5C2AD0BA2F0038A967 /* MainTabBar.swift */; };
 		3F8DAD5F2AD0BB400038A967 /* AskWellTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DAD5E2AD0BB400038A967 /* AskWellTab.swift */; };
 		3F8DAD632AD0C4250038A967 /* TextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DAD622AD0C4250038A967 /* TextMessageView.swift */; };
+		49DCD2F82AD98A3300C8C48E /* YouTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCD2F72AD98A3300C8C48E /* YouTab.swift */; };
 		49DF14352AD479B900BB444F /* JourneysTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF14342AD479B900BB444F /* JourneysTab.swift */; };
 		49DF14382AD483C700BB444F /* NewForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF14372AD483C700BB444F /* NewForYou.swift */; };
 		49DF143A2AD483EA00BB444F /* Active.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF14392AD483EA00BB444F /* Active.swift */; };
@@ -59,6 +60,7 @@
 		3F8DAD5C2AD0BA2F0038A967 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		3F8DAD5E2AD0BB400038A967 /* AskWellTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskWellTab.swift; sourceTree = "<group>"; };
 		3F8DAD622AD0C4250038A967 /* TextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageView.swift; sourceTree = "<group>"; };
+		49DCD2F72AD98A3300C8C48E /* YouTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTab.swift; sourceTree = "<group>"; };
 		49DF14342AD479B900BB444F /* JourneysTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneysTab.swift; sourceTree = "<group>"; };
 		49DF14372AD483C700BB444F /* NewForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewForYou.swift; sourceTree = "<group>"; };
 		49DF14392AD483EA00BB444F /* Active.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Active.swift; sourceTree = "<group>"; };
@@ -184,12 +186,29 @@
 			path = AskWell;
 			sourceTree = "<group>";
 		};
+		49DCD2F52AD989E300C8C48E /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rewards;
+			sourceTree = "<group>";
+		};
+		49DCD2F62AD989FA00C8C48E /* You */ = {
+			isa = PBXGroup;
+			children = (
+				49DCD2F72AD98A3300C8C48E /* YouTab.swift */,
+			);
+			path = You;
+			sourceTree = "<group>";
+		};
 		49DF14332AD478E600BB444F /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				49DCD2F12AD7C29B00C8C48E /* Home */,
-				49DF14362AD4839600BB444F /* Journeys */,
 				49DCD2F42AD7C7E100C8C48E /* AskWell */,
+				49DF14362AD4839600BB444F /* Journeys */,
+				49DCD2F12AD7C29B00C8C48E /* Home */,
+				49DCD2F52AD989E300C8C48E /* Rewards */,
+				49DCD2F62AD989FA00C8C48E /* You */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -345,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DCD2F82AD98A3300C8C48E /* YouTab.swift in Sources */,
 				3F8DAD5D2AD0BA2F0038A967 /* MainTabBar.swift in Sources */,
 				3F8DAD632AD0C4250038A967 /* TextMessageView.swift in Sources */,
 				49DF143F2AD4864200BB444F /* Carousel5.swift in Sources */,
