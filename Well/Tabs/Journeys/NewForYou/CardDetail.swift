@@ -9,63 +9,95 @@ import SwiftUI
 
 struct CardDetail: View {
     var body: some View {
-        
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                // Apartado 1: Imagen que ocupa todo el ancho
                 Image("imagen1")
                     .resizable()
-                    .frame(width: .infinity)
-                    .scaledToFit()
+                    .scaledToFill()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .overlay(
-                        VStack( spacing: 20) {
+                        VStack(alignment: .leading, spacing: 20) {
                             Spacer()
-                            Rectangle()
-                                .foregroundColor(Color.black.opacity(0.3))
-                                .frame(width: 110, height: 30) // Tamaño del cuadro amarillo
-                                .cornerRadius(10)
-                                .overlay(
+                            VStack(alignment: .leading, spacing: 20) {
+                                ZStack {
                                     HStack {
                                         Image(systemName: "circle.fill")
                                             .foregroundColor(Color.yellow)
-                                            .font(Font.system(size: 15)) // Ajusta el tamaño de la fuente
-                                        
+                                            .font(.body)
                                         Text("10 per day")
-                                            .foregroundColor(.white) // Texto blanco
-                                            .font(Font.system(size: 15)) // Ajusta el tamaño de la fuente
+                                            .foregroundColor(.white)
+                                            .font(.body)
                                     }
-                                )
-                            Text("Check-ins")
-                                .foregroundColor(Color.white)
-                                .font(.system(size: 20, weight: .bold, design: .rounded))
-                            Text("Track your progress, gain insights, and build lasting habits")
-                                .foregroundColor(Color.white)
-                                .font(.system(size: 18, design: .rounded))
-                            Button(action: {
-                                // Acción que se ejecutará al presionar el botón
-                            }) {
-                                Text("Get Started")
-                                    .foregroundColor(Color.blue)
-                                    .font(.system(size: 16))
-                                    .padding()
-                                    .background(Color.white)
-                                    .cornerRadius(20) // Agrega patas redondas al botón
+                                    .padding(7)
+                                    .font(.body)
+                                }
+                                .background(Color.black.opacity(0.3))
+                                .cornerRadius(10)
+                               
+                                Text("Check-ins")
+                                    .foregroundColor(Color.white)
+                                    .font(.title.bold())
+                                Text("Track your progress, gain insights, and build lasting habits")
+                                    .foregroundColor(Color.white)
+                                    .font(.body)
+                                Button(action: {
+                                }) {
+                                    Text("Get Started")
+                                        .foregroundColor(Color.blue)
+                                        .font(.system(size: 16))
+                                        .padding()
+                                        .background(Color.white)
+                                        .cornerRadius(20)
+                                }
                             }
-                        }
-                        .padding()
-                        .padding(.vertical, 15)
-                        .alignmentGuide(.bottom) { d in d[VerticalAlignment.center] }
+                            .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding(40)
+                        }//.background(Color.random)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     )
-                  
+                
+                LazyVGrid(columns: [
+                    GridItem(.flexible(minimum: 100), spacing: 25),
+                    GridItem(.flexible(minimum: 100), spacing: 25)
+                ]) {
+                    ForEach(0..<4) { _ in
+                        VStack {
+                            Text("Time")
+                                .foregroundColor(Color.black)
+                                .font(.body.bold())
+                            Image(systemName: "house.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: .infinity)
+                                .cornerRadius(10)
+                            Text("3 to 5min")
+                                .foregroundColor(Color.gray)
+                                .font(.body.bold())
+                        }
+                        .frame(maxWidth: .infinity)
+                        .cornerRadius(10)
+                        .padding(20)
+                    }
+                }.padding(40)
 
-                VStack(spacing: 0) {
+
+
+                /*VStack(spacing: 0) {
                     HStack(spacing: 10) {
                         VStack {
                             Text("Time")
-                            Image(systemName: "house.fill")
-                                .resizable()
-                                .frame(width: 50, height: 50)
+                                .foregroundColor(Color.black)
+                                .font(.body.bold())
+                            GeometryReader { geometry in
+                                Image(systemName: "house.fill")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit) // Ajusta la imagen al tamaño disponible
+                                    .frame(width: geometry.size.width, height: geometry.size.width) // Utiliza el ancho como el alto para que sea cuadrada
+                            }
                             Text("3 to 5min")
+                                .foregroundColor(Color.gray)
+                                .font(.body.bold())
                         }
                         Spacer()
                         Divider()
@@ -82,7 +114,6 @@ struct CardDetail: View {
                     Spacer()
                     Divider()
                     Spacer()
-                    
                     HStack(spacing: 10) {
                         VStack {
                             Text("Duration")
@@ -102,97 +133,71 @@ struct CardDetail: View {
                             Text("prevent")
                         }
                     }.padding()
-                    
-                }.padding(45)
-
-                
-                // Apartado 2: Texto
+                }.padding(45)*/
                 VStack {
                     VStack (alignment: .leading){
                         Text("What you will focus on")
-                            .font(.headline)
-                        //.fontWeight(.bold)
-                            .font(.system(size: 10))
-                        
+                            .foregroundColor(Color.black)
+                            .font(.headline.bold())
                         Text("staying well during cold and flu season, You will learn healthy habits to protect both yourself and others")
                             .font(.body)
                             .foregroundColor(.gray)
-                            .font(.system(size: 10))
+                            
                     }.padding()
-                    
-                    
-                    
-                    
-                    // Apartado 3: Línea divisoria
                     Divider()
                     VStack (alignment: .leading){
                         Text("Why practice cold, flu, and COVID prevention?")
-                            .font(.headline)
-                        //.fontWeight(.bold)
-                            .font(.system(size: 10))
-                        
+                            .foregroundColor(Color.black)
+                            .font(.headline.bold())
                         Text("staying well during cold and flu season, You will learn healthy habits to protect both yourself and othersstaying well during cold and flu season, You will learn healthy habits to protect both yourself and others")
                             .font(.body)
                             .foregroundColor(.gray)
-                            .font(.system(size: 10))
+                         
                     }.padding()
-                    
-                    // Apartado 4: Texto
                     Divider()
                     VStack (alignment: .leading){
                         Text("Reward opportunities")
-                            .font(.headline)
-                        //.fontWeight(.bold)
-                            .font(.system(size: 10))
-                        
+                            .foregroundColor(Color.black)
+                            .font(.headline.bold())
                         Text("staying well during cold and flu season, You will learn healthy habits to protect both yourself and others")
                             .font(.body)
                             .foregroundColor(.gray)
-                            .font(.system(size: 10))
+                        
                     }.padding()
-            
                     Divider()
                     VStack (alignment: .leading){
                         Text("Learn more, earn more")
-                            .font(.headline)
-                        //.fontWeight(.bold)
-                            .font(.system(size: 10))
-                        
+                            .foregroundColor(Color.black)
+                            .font(.headline.bold())
                         Text("staying well during cold and flu season, You will learn healthy habits to protect both yourself and others")
                             .font(.body)
                             .foregroundColor(.gray)
-                            .font(.system(size: 10))
+                            
                     }.padding()
-                    
-                    // Apartado 8: Botones centrados
                     VStack {
                         Button(action: {
-                            // Acción para el primer botón
                         }) {
                             Text("Get Started")
+                                .font(.headline.bold())
                                 .padding()
                                 .foregroundColor(.white)
                         }
                         .frame(maxWidth: .infinity)
                         .background(Color.blue)
-                        .cornerRadius(100) // Añade esquinas redondas
-
+                        .cornerRadius(100)
                         Button(action: {
-                            // Acción para el segundo botón
                         }) {
                             Text("Remove")
+                                .font(.headline.bold())
                                 .padding()
                                 .foregroundColor(.blue)
                         }
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
-                        .cornerRadius(100) // Añade esquinas redondas
+                        .cornerRadius(100)
                     }
                     .padding()
-
-
                 }.padding()
-                
             }
         }
     }

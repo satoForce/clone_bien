@@ -22,12 +22,13 @@ struct JourneysTab: View {
                             self.selectedTab = index
                         }) {
                             Text("\(tabs[index])")
-                                .font(.headline)
+                                .font(.system(size: 20))
                                 .padding(.vertical, 10)
                                 .foregroundColor(selectedTab == index ? .blue : .black)
                         }
                     }
                 }
+                .padding(.horizontal)
                 Divider().background(Color.black)
                 GeometryReader { geometry in
                     Rectangle()
@@ -44,7 +45,7 @@ struct JourneysTab: View {
                 }
                 Spacer()
             }
-            .padding()
+           // .padding()
         }
     }
 }

@@ -16,7 +16,7 @@ struct Past: View {
                   ForEach(0..<8) { _ in
                       ZStack(alignment: .leading) {
                           Color.white
-                              .frame(height: 100)
+                              .frame(maxWidth: .infinity)
                               .cornerRadius(0)
                               .shadow(radius: 5)
                           
@@ -37,7 +37,7 @@ struct Past: View {
                                   }
                                   Spacer()
                                   VStack {
-                                      Text(">").font(.system(size: 25))
+                                      Text(">").font(.headline)
                                   }
                               }
                           }
