@@ -54,6 +54,8 @@ struct AskWellTab: View {
     }
 }
 
-#Preview {
-    AskWellTab()
+struct AskWell_Previews: PreviewProvider {
+    static var previews: some View {
+        AskWellTab()
+    }
 }

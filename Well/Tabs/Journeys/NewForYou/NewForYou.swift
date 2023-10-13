@@ -66,6 +66,9 @@ struct NewForYou: View {
     }
 }
 
-#Preview {
-    NewForYou()
+
+struct NewForYou_Previews: PreviewProvider {
+    static var previews: some View {
+        NewForYou()
+    }
 }

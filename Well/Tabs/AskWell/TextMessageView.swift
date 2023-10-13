@@ -23,6 +23,8 @@ struct TextMessageView: View {
     }
 }
 
-#Preview {
-    TextMessageView(text: "Hola, ¿cómo estás?")
+struct TextMessague_Previews: PreviewProvider {
+    static var previews: some View {
+        TextMessageView(text: "Hola, ¿cómo estás?")
+    }
 }

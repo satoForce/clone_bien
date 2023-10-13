@@ -203,6 +203,8 @@ struct CardDetail: View {
     }
 }
 
-#Preview {
-    CardDetail()
+struct CardDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        CardDetail()
+    }
 }

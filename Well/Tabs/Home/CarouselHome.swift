@@ -50,10 +50,11 @@ struct CarouselHome: View {
     }
 }
 
-#Preview {
-    CarouselHome()
+struct CarouselHome_Previews: PreviewProvider {
+    static var previews: some View {
+        CarouselHome()
+    }
 }
-
 
 /*
  HStack{

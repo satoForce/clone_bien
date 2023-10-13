@@ -51,6 +51,8 @@ struct Past: View {
     }
 }
 
-#Preview {
-    Past()
+struct Past_Previews: PreviewProvider {
+    static var previews: some View {
+        Past()
+    }
 }

@@ -50,6 +50,8 @@ struct JourneysTab: View {
     }
 }
 
-#Preview {
-    JourneysTab()
+struct JourneysTab_Previews: PreviewProvider {
+    static var previews: some View {
+        JourneysTab()
+    }
 }

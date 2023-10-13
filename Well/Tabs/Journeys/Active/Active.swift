@@ -54,6 +54,8 @@ struct Active: View {
     }
 }
 
-#Preview {
-    Active()
+struct Active_Previews: PreviewProvider {
+    static var previews: some View {
+        Active()
+    }
 }

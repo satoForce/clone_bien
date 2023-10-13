@@ -68,12 +68,11 @@ struct Carousel5: View {
     }
 }
 
-
-#Preview {
-    Carousel5()
+struct Carousel5_Previews: PreviewProvider {
+    static var previews: some View {
+        Carousel5()
+    }
 }
-
-
 
 /*
  import SwiftUI

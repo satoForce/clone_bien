@@ -179,7 +179,8 @@ struct Home: View {
 }
 
 
-#Preview {
-    Home()
+struct Home_Previews: PreviewProvider {
+    static var previews: some View {
+        Home()
+    }
 }
-        
