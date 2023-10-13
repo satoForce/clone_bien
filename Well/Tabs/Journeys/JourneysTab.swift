@@ -28,6 +28,7 @@ struct JourneysTab: View {
                         }
                     }
                 }
+                .padding(.horizontal)
                 Divider().background(Color.black)
                 GeometryReader { geometry in
                     Rectangle()
@@ -44,7 +45,7 @@ struct JourneysTab: View {
                 }
                 Spacer()
             }
-            .padding()
+           // .padding()
         }
     }
 }
